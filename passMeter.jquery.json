@@ -34,7 +34,7 @@
   "bugs": "https://github.com/RuanAragao/passMeter/issues/",
   "homepage": "http://ruanaragao.com/lab/jquery/passMeter/",
   "docs": "https://github.com/RuanAragao/passMeter#readme",
-  "download": "https://github.com/jquery-boilerplate/boilerplate/archive/master.zip",
+  "download": "https://github.com/RuanAragao/passMeter/archive/master.zip",
   "dependencies": {
     "jquery": ">=1.4"
   }
