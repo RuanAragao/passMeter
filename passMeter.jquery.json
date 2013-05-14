@@ -1,7 +1,7 @@
 {
   "name": "passMeter",
   "title": "PassMeter",
-  "description": "Helping in delicate moments.",
+  "description": "A plugin jQuery for measure password force very cool! ;-).",
   "keywords": [
     "jquery",
     "pass",
@@ -13,7 +13,7 @@
     "strength"
 
   ],
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": {
     "name": "Ruan Aragão",
     "email": "ruanaragao2@gmail.com",
