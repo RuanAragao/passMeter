@@ -1,0 +1,41 @@
+{
+  "name": "passMeter",
+  "title": "PassMeter",
+  "description": "Helping in delicate moments.",
+  "keywords": [
+    "jquery",
+    "pass",
+    "check",
+    "measure",
+    "meter",
+    "password",
+    "security",
+    "strength"
+
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Ruan Aragão",
+    "url": "https://github.com/RuanAragao"
+  },
+  "maintainers": [
+    {
+      "name": "Ruan Aragão",
+      "email": "ruanaragao2@gmail.com",
+      "url": "https://github.com/RuanAragao"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/RuanAragao/passMeter/master/LICENSE"
+    }
+  ],
+  "bugs": "https://github.com/RuanAragao/passMeter/issues/",
+  "homepage": "http://ruanaragao.com/lab/jquery/passMeter/",
+  "docs": "https://github.com/RuanAragao/passMeter#readme",
+  "download": "https://github.com/jquery-boilerplate/boilerplate/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}

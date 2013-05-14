@@ -3,6 +3,23 @@
 <head>
 <meta charset=utf-8 />
 <title>PassMeter</title>
+<style type="text/css">
+#register {margin-left:100px;}
+#register label{margin-right:5px;}
+#register input {
+    padding:5px 7px;
+    border:1px solid #d5d9da;
+    box-shadow: 0 0 5px #e8e9eb inset;
+    width:250px;
+    font-size:1em;
+    outline:0;
+}
+#result{margin-left:5px;}
+#register .short{color:#FF0000;}
+#register .weak{color:#E66C2C;}
+#register .good{color:#2D98F3;}
+#register .strong{color:#006400;}
+</style>
 </head>
 <body>
 <form id="register">
@@ -11,10 +28,10 @@
     <div id="result"></div>
 </form>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="dist/jquery.passMeter.min.js"></script>
+<script src="../passMeter/src/jquery.passMeter.min.js"></script>
 <script type="text/javascript">
-    $.passMeter({
-    // Config local
+	$.passMeter({
+	// Config local
     'inputPass'     :   '#password',
     'localResult'   :   '#result',
     // Msg level pass
@@ -22,7 +39,7 @@
     'low'       :   'More',
     'good'      :   'Okay',
     'strong'    :   'Yeah!'
-    });
+	});
 </script>
 </body>
 </html>
