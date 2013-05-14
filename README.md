@@ -30,3 +30,14 @@ jQuery plugin passMeter
 		'strong'    :   'Yeah!'
 	});
 	```
+	
+## Example
+
+#### [demo/](https://github.com/RuanAragao/passMeter/tree/master/demo)
+*Contains a simple HTML file to demonstrate the usage.*
+
+#### [View online](http://ruanaragao.com/lab/jquery/passMeter/)
+
+## License
+
+[MIT License](https://github.com/RuanAragao/passMeter/blob/master/LICENSE)
