@@ -2,6 +2,12 @@ jQuery plugin passMeter
 ========================
 *Helping in delicated moment.*
 
+## WTF?
+- PassMeter analyzes entered password strings and changes the color of the password field input based on the string's complexity.
+- The plugin works in real-time as the user types in his password.
+- Along with changing the color, a small text can also be displayed.
+- All of the above are configurable (text and color).
+
 ## Usage
 
 1. Include jQuery:
