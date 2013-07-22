@@ -2,22 +2,27 @@
     $.passMeter = function(settings){
         var config = {
             // Config local
-            'inputPass'     :   '#password',
-            'localResult'   :   '#result',
+            'id_password'     :   '#password',
+            'id_result'   :   '#password-result',
+
             // Msg level pass
-            'veryLow'   :   'Muito fraca',
-            'low'       :   'Fraca',
-            'good'      :   'Boa',
-            'strong'    :   'Forte'
+            'msg_bad'   	:   'Bad',
+            'msg_low'       :   'Low',
+            'msg_good'      :   'Good',
+            'msg_strong'    :   'Strong'
+
         };
         if (settings){settings = jQuery.extend(config, settings);}
 
         // variables
-        var inputPass   = jQuery(settings.inputPass);
-        var localResult = jQuery(settings.localResult);
+        var nodePassword   = $(settings.id_password);
+        var nodeResult = $(settings.id_result);
 
-        jQuery(inputPass).keyup(function(){
-                jQuery(localResult).html(checkStrength(jQuery(inputPass).val()));
+		// all our potential results for css
+		var resultClasses = Array ( 'bad', 'low', 'good', 'strong' );
+
+        nodePassword.keyup(function(){
+                nodeResult.html(checkStrength(nodePassword.val()));
             });
 
             function checkStrength(password){
@@ -25,10 +30,18 @@
                 //initial force
                 var strength = 0;
 
+                // remove existing label
+				for (var i = 0, len = resultClasses.length; i < len; i++ ) {
+					nodePassword.removeClass( "passMeter-" + resultClasses[i] );
+					nodeResult.removeClass( "passMeter-" + resultClasses[i] );
+				}
+
+
                 //if password length is less than 6, return message.
                 if (password.length < 6) {
-                    jQuery(inputPass).css('background','#FF0000');
-                    return settings.veryLow;
+                    nodePassword.addClass('passMeter-bad')
+                    nodeResult.addClass('passMeter-bad')
+                    return settings.msg_bad;
                 }
 
                 //if password length is greater than 6, go.
@@ -52,14 +65,17 @@
 
                 //if value is less than 2
                 if (strength < 2 ) {
-                    jQuery(inputPass).css('background','#E66C2C');
-                    return settings.low;
+                    nodePassword.addClass('passMeter-low')
+                    nodeResult.addClass('passMeter-low')
+                    return settings.msg_low;
                 } else if (strength == 2 ) {
-                    jQuery(inputPass).css('background','#2D98F3');
-                    return settings.good;
+                    nodePassword.addClass('passMeter-good')
+                    nodeResult.addClass('passMeter-good')
+                    return settings.msg_good;
                 } else {
-                    jQuery(inputPass).css('background','#006400');
-                    return settings.strong;
+                    nodePassword.addClass('passMeter-strong')
+                    nodeResult.addClass('passMeter-strong')
+                    return settings.msg_strong;
                 }
             }
         return this;
