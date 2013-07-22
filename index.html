@@ -15,31 +15,52 @@
     outline:0;
 }
 #result{margin-left:5px;}
-#register .short{color:#FF0000;}
-#register .weak{color:#E66C2C;}
-#register .good{color:#2D98F3;}
-#register .strong{color:#006400;}
 </style>
 </head>
 <body>
 <form id="register">
     <label for="password">Password:</label>
     <input name="password" id="password" type="password" />
-    <div id="result"></div>
+    <div id="password-result"></div>
 </form>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="../passMeter/src/jquery.passMeter.min.js"></script>
+<script src="../passMeter/jquery.passMeter.js"></script>
+
+<div id="code-live">
 <script type="text/javascript">
-	$.passMeter({
-	// Config local
-    'inputPass'     :   '#password',
-    'localResult'   :   '#result',
-    // Msg level pass
-    'veryLow'   :   'Nooooo',
-    'low'       :   'More',
-    'good'      :   'Okay',
-    'strong'    :   'Yeah!'
-	});
+/* set up the password meter */
+$(document).ready(function(){
+
+  $.passMeter({
+
+  // configure the divs
+  'id_password'   :   '#password',
+  'id_result'   	:   '#password-result',
+
+  // customize the message levels
+  'bad'   :   'Nooooo',
+  'low'       :   'More',
+  'good'      :   'Okay',
+  'strong'    :   'Yeah!'
+  });
+
+});
 </script>
+<style type="text/css">
+/* style the password meter */
+  .passMeter-bad{color:#FF0000;}
+  .passMeter-low{color:#E66C2C;}
+  .passMeter-good{color:#2D98F3;}
+  .passMeter-strong{color:#006400;}
+</style>
+</div>
+<pre id="code-pre"></pre>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#code-pre').text($('#code-live').text())
+})
+</script>
+
 </body>
 </html>
