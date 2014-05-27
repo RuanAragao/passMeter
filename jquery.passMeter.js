@@ -1,3 +1,10 @@
+/*!
+ * jquery.passMeter v1.0.2
+ * measure password strength
+ * https://github.com/RuanAragao/passMeter
+ * MIT License
+ * by Ruan Aragão
+ */
 ;(function ( $, window, document, undefined ) {
     $.passMeter = function(settings){
         var config = {
