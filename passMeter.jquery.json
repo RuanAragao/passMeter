@@ -13,7 +13,7 @@
     "strength"
 
   ],
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Ruan Aragão",
     "email": "ruanaragao2@gmail.com",
@@ -24,6 +24,11 @@
       "name": "Ruan Aragão",
       "email": "ruanaragao2@gmail.com",
       "url": "https://github.com/RuanAragao"
+    },
+    {
+      "name": "Jonathan Vanasco",
+      "email": "",
+      "url": "https://github.com/jvanasco"
     }
   ],
   "licenses": [
@@ -33,7 +38,7 @@
     }
   ],
   "bugs": "https://github.com/RuanAragao/passMeter/issues/",
-  "homepage": "http://ruanaragao.com/lab/jquery/passMeter/",
+  "homepage": "https://ruanaragao.github.io/passMeter/",
   "docs": "https://github.com/RuanAragao/passMeter#readme",
   "download": "https://github.com/RuanAragao/passMeter/archive/master.zip",
   "dependencies": {
