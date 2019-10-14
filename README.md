@@ -30,44 +30,45 @@ You can write css to target `.passMeter-bad` or specifically `#password .passMet
 
 1. Include jQuery:
 
-  ```html
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-	```
+```html
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+```
 
 2. Include plugin's code:
 
-	```html
-	<script src="dist/jquery.passMeter.min.js"></script>
-	```
+```html
+<script src="dist/jquery.passMeter.min.js"></script>
+```
 
 3. Call the plugin:
 
-	```javascript
-	$(document).ready(function(){
-		$.passMeter({
-			// Config local
-			id_password     :   '#password',
-			id_resul'   	:   '#password-result',
+```javascript
+$(document).ready(function(){
+	$.passMeter({
+		// Config local
+		id_password   :   '#password',
+		id_resul   	  :   '#password-result',
 
-			// Msg level pass
-			msg_bad       :   'Nooooo',
-			msg_low       :   'More',
-			msg_good      :   'Okay',
-			msg_strong    :   'Yeah!'
-		});
-	)}
-	```
+		// Msg level pass
+		msg_bad       :   'Nooooo',
+		msg_low       :   'More',
+		msg_good      :   'Okay',
+		msg_strong    :   'Yeah!'
+	});
+)}
+```
 
 4. Write some css
 
-	<style type="text/css">
-	/* style the password meter */
-	  .passMeter-bad{color:#FF0000;}
-	  .passMeter-low{color:#E66C2C;}
-	  .passMeter-good{color:#2D98F3;}
-	  .passMeter-strong{color:#006400;}
-	</style>
-
+```css
+<style type="text/css">
+/* style the password meter */
+	.passMeter-bad{color:#FF0000;}
+	.passMeter-low{color:#E66C2C;}
+	.passMeter-good{color:#2D98F3;}
+	.passMeter-strong{color:#006400;}
+</style>
+```
 
 ## Advanced Customization
 
@@ -76,60 +77,62 @@ There are some advanced customization options for the configuration.
 The "special characters" were pulled out into a configurable regex, because some backend systems may not support the default options.
 
 These are the defaults:
+```javascript
+// configurable length
+min_chars       : 6,
+min_chars_boost : 8,
 
-	// configurable length
-	min_chars       : 6,
-	min_chars_boost : 8,
+// configurable strength check
+min_strength_good : 2,
+min_strength_strong : 3,
 
-	// configurable strength check
-	min_strength_good : 2,
-	min_strength_strong : 3,
+// configurable regex for special chars
+regex_special_chars : /[!%&@#$\^*?_~]/,
 
-	// configurable regex for special chars
-	regex_special_chars : /[!%&@#$\^*?_~]/,
+// at least 2 special chars
+regex_advanced : /.*[!%&@#$\^*?_~].*[!%&@#$\^*?_~].*/,
+```
 
-	// at least 2 special chars
-	regex_advanced : /.*[!%&@#$\^*?_~].*[!%&@#$\^*?_~].*/,
-
-
-min_chars
+### __min_chars__
 Minimum strength to display `msg_low`.  Lower than this, and `msg_bad` appears
 
-min_chars_boost
+### __min_chars_boost__
 If the password is at least this long, the strength gets an extra point
 
-min_strength_good
+### __min_strength_good__
 Minimum strength to display `msg_good`
 
-min_strength_strong
+### __min_strength_strong__
 Minimum strength to display `msg_strong`
 
-regex_special_chars
+### __regex_special_chars__
 If the password has a special char, the strength gets an extra point
 
-regex_advanced
+### __regex_advanced__
 If the password matches this (default 1 or more special chars), the strength gets an extra point
 
-callback
+### __callback__
 If defined, this will be run after checking the password.  It will be called with the `message` as the only argument.
 This can allow you to customize actions for each strength level.
 
-callback example:
+## callback example:
 
-	$.passMeter({
-		...
-		callback: function(message){
-		  console.log(message == this.msg_bad);
-		}
-		...
-	});
-
+```javascript
+$.passMeter({
+	...
+	callback: function(message){
+		console.log(message == this.msg_bad);
+	}
+	...
+});
+```
 
 
 ## Example
 
-#### [demo/](https://github.com/jvanasco/passMeter/tree/master/demo)
+#### File: [index.html](https://github.com/RuanAragao/passMeter/blob/master/index.html)
 *Contains a simple HTML file to demonstrate the usage.*
+#### Live: [ruanaragao.github.io/passMeter](https://ruanaragao.github.io/passMeter/)
 
 ## License
 
