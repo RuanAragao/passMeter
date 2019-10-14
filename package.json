@@ -11,6 +11,8 @@
     "url": "git+https://github.com/RuanAragao/passMeter.git"
   },
   "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
     "jquery",
     "pass",
     "check",
