@@ -1,0 +1,12 @@
+v1.0.3
+	2016.01.28
+	- cleaned up examples [jvanasco]
+	- extended the config with new options [jvanasco]
+
+		min_chars
+		min_chars_boost
+		min_strength_good
+		min_strength_strong
+		regex_special_chars
+		regex_advanced
+		callback

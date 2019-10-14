@@ -46,14 +46,14 @@ You can write css to target `.passMeter-bad` or specifically `#password .passMet
 	$(document).ready(function(){
 		$.passMeter({
 			// Config local
-			'id_password'     :   '#password',
-			'id_result'   	:   '#password-result',
+			id_password     :   '#password',
+			id_resul'   	:   '#password-result',
 
 			// Msg level pass
-			'msg_bad'      :   'Nooooo',
-			'msg_low'       :   'More',
-			'msg_good'      :   'Okay',
-			'msg_strong'    :   'Yeah!'
+			msg_bad       :   'Nooooo',
+			msg_low       :   'More',
+			msg_good      :   'Okay',
+			msg_strong    :   'Yeah!'
 		});
 	)}
 	```
@@ -69,11 +69,60 @@ You can write css to target `.passMeter-bad` or specifically `#password .passMet
 	</style>
 
 
-## Status
+## Advanced Customization
 
-This is a fork of `https://github.com/RuanAragao/passMeter`
+There are some advanced customization options for the configuration.
 
-The original works great, except it hardcoded all the controls and had some unnecessary jquery calls..
+The "special characters" were pulled out into a configurable regex, because some backend systems may not support the default options.
+
+These are the defaults:
+
+	// configurable length
+	min_chars       : 6,
+	min_chars_boost : 8,
+
+	// configurable strength check
+	min_strength_good : 2,
+	min_strength_strong : 3,
+
+	// configurable regex for special chars
+	regex_special_chars : /[!%&@#$\^*?_~]/,
+
+	// at least 2 special chars
+	regex_advanced : /.*[!%&@#$\^*?_~].*[!%&@#$\^*?_~].*/,
+
+
+min_chars
+Minimum strength to display `msg_low`.  Lower than this, and `msg_bad` appears
+
+min_chars_boost
+If the password is at least this long, the strength gets an extra point
+
+min_strength_good
+Minimum strength to display `msg_good`
+
+min_strength_strong
+Minimum strength to display `msg_strong`
+
+regex_special_chars
+If the password has a special char, the strength gets an extra point
+
+regex_advanced
+If the password matches this (default 1 or more special chars), the strength gets an extra point
+
+callback
+If defined, this will be run after checking the password.  It will be called with the `message` as the only argument.
+This can allow you to customize actions for each strength level.
+
+callback example:
+
+	$.passMeter({
+		...
+		callback: function(message){
+		  console.log(message == this.msg_bad);
+		}
+		...
+	});
 
 
 

@@ -24,7 +24,7 @@
     <div id="password-result"></div>
 </form>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script src="../passMeter/jquery.passMeter.js"></script>
+<script src="./jquery.passMeter.js"></script>
 
 <div id="code-live">
 <script type="text/javascript">
@@ -34,14 +34,18 @@ $(document).ready(function(){
   $.passMeter({
 
   // configure the divs
-  'id_password'   :   '#password',
-  'id_result'   	:   '#password-result',
+  id_password   :   '#password',
+  id_result     :   '#password-result',
 
   // customize the message levels
-  'bad'   :   'Nooooo',
-  'low'       :   'More',
-  'good'      :   'Okay',
-  'strong'    :   'Yeah!'
+  msg_bad       :   'Nooooo',
+  msg_low       :   'More',
+  msg_good      :   'Okay',
+  msg_strong    :   'Yeah!',
+
+  callback: function(message){
+    console.log(message == this.msg_bad);
+  }
   });
 
 });
@@ -58,7 +62,7 @@ $(document).ready(function(){
 
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#code-pre').text($('#code-live').text())
+    $('#code-pre').text($('#code-live').text())
 })
 </script>
 
