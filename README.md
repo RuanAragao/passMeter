@@ -2,6 +2,12 @@ jQuery plugin passMeter
 ========================
 *Helping in delicated moment.*
 
+[![npm version](https://badge.fury.io/js/passmeter.svg)](https://badge.fury.io/js/passmeter)
+[![GitHub issues](https://img.shields.io/github/issues/RuanAragao/passMeter)](https://github.com/RuanAragao/passMeter/issues)
+[![GitHub forks](https://img.shields.io/github/forks/RuanAragao/passMeter)](https://github.com/RuanAragao/passMeter/network)
+[![GitHub stars](https://img.shields.io/github/stars/RuanAragao/passMeter)](https://github.com/RuanAragao/passMeter/stargazers)
+[![GitHub license](https://img.shields.io/github/license/RuanAragao/passMeter)](https://github.com/RuanAragao/passMeter/blob/master/LICENSE)
+
 ## What does this do?
 - PassMeter analyzes entered password strings and helps you alert the user with the strength.
 - The plugin works in real-time as the user types in his password.
