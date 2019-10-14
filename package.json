@@ -1,0 +1,33 @@
+{
+  "name": "passmeter",
+  "version": "1.0.3",
+  "description": "A plugin jQuery for measure password force very cool! ;-)",
+  "main": "jquery.passMeter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuanAragao/passMeter.git"
+  },
+  "keywords": [
+    "jquery",
+    "pass",
+    "check",
+    "measure",
+    "meter",
+    "password",
+    "security",
+    "strength",
+    "senha",
+    "segurança",
+    "teste",
+    "verificador"
+  ],
+  "author": "Ruan Aragão",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RuanAragao/passMeter/issues"
+  },
+  "homepage": "https://github.com/RuanAragao/passMeter#readme"
+}
