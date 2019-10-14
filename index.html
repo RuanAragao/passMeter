@@ -16,6 +16,10 @@
 }
 #result{margin-left:5px;}
 </style>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
 </head>
 <body>
 <form id="register">
@@ -26,7 +30,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="./jquery.passMeter.js"></script>
 
-<div id="code-live">
+<div id="code-live-javascript">
 <script type="text/javascript">
 /* set up the password meter */
 $(document).ready(function(){
@@ -50,6 +54,8 @@ $(document).ready(function(){
 
 });
 </script>
+</div>
+<div id="code-live-css">
 <style type="text/css">
 /* style the password meter */
   .passMeter-bad{color:#FF0000;}
@@ -58,11 +64,16 @@ $(document).ready(function(){
   .passMeter-strong{color:#006400;}
 </style>
 </div>
-<pre id="code-pre"></pre>
+<pre>
+  <code id="code-pre-javascript" class="javascript"></code>
+  <code id="code-pre-css" class="css"></code>
+</pre>
 
 <script type="text/javascript">
 $(document).ready(function(){
-    $('#code-pre').text($('#code-live').text())
+    $('#code-pre-javascript').text($('#code-live-javascript').text());
+    $('#code-pre-css').text($('#code-live-css').text());
+    hljs.initHighlightingOnLoad();
 })
 </script>
 
