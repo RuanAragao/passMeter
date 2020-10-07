@@ -26,6 +26,7 @@
     <label for="password">Password:</label>
     <input name="password" id="password" type="password" />
     <div id="password-result"></div>
+    <button id="submitButton" disabled>Submit</button>
 </form>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="./jquery.passMeter.js"></script>
@@ -40,6 +41,7 @@ $(document).ready(function(){
   // configure the divs
   id_password   :   '#password',
   id_result     :   '#password-result',
+  id_submitButton : '#submitButton',
 
   // customize the message levels
   msg_bad       :   'Nooooo',
